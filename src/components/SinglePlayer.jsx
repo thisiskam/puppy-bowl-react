@@ -6,7 +6,7 @@ import { deletePlayer } from "../API"
 import { Link } from 'react-router-dom'
 
 export default function SinglePlayer () {
-    const [singlePlayer, setSinglePlayer] = useState(null)
+    const [singlePlayer, setSinglePlayer] = useState('')
     const { userId } = useParams()
 
     console.log(userId);
@@ -28,15 +28,15 @@ export default function SinglePlayer () {
     return (
         <>{ singlePlayer 
             ? 
-            (<div className="singlePlayer">
-                <h2>{singlePlayer.name}</h2>
-                <h3>{singlePlayer.breed}</h3>
-                <h4>{singlePlayer.status}</h4>
+            (<div id='single-player'>
+                <h2>{singlePlayer.name.toUpperCase()}</h2>
+                <h3>{singlePlayer.breed.charAt(0).toUpperCase() + singlePlayer.breed.slice(1)}</h3>
+                <h4>{singlePlayer.status.charAt(0).toUpperCase() + singlePlayer.status.slice(1)}</h4>
                 <img src={singlePlayer.imageUrl} alt="puppy" width='200px' /><br />
                 <button id="delete" onClick={() => {removePlayer(singlePlayer.id)}}>Delete Player</button>
             </div>) 
             :
-            (<div className="removed">
+            (<div className="removed-player">
                 <h3>Player Has Been Removed</h3>
                 <Link to='/' className='button'>Return</Link>
             </div>)

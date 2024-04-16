@@ -1,42 +1,199 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+* {
+  margin: 0;
+  font-family: monospace;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-image: url('https://img.freepik.com/free-photo/close-up-football-field_23-2148930198.jpg?w=1060&t=st=1713267908~exp=1713268508~hmac=a63a9b658b2797003a598a16f619c586190970dffc001c13b31c9a736dd5512d');
+}
+
+#navbar {
+  background-color: #EDF7F6;
+  overflow: hidden;
+  border-bottom: 2px solid #C47335;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9)
+}
+
+.nav-links {
+  text-align: right;
+}
+
+.nav-button {
+  display: inline-block;
+  color: #56351E;
   text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.nav-button:hover {
+  background-color: #C47335;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#all-players-box {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.all-players-title {
+  text-align: center;
+  font-size: 40px;
+  color: #F19953;
+  background-image: url('https://media.cnn.com/api/v1/images/stellar/prod/230208113850-08-puppy-bowl-2023.jpg?c=16x9&q=h_653,w_1160,c_fill/f_webp');
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0; 
+  background-color: rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
 }
 
-.card {
-  padding: 2em;
+#search {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin-top: 15px;
 }
 
-.read-the-docs {
-  color: #888;
+#search-bar {
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+  border: none;
+  border-radius: 25px;
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  outline: none;
+  transition: background-color 0.3s ease;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9)
+}
+
+#search-bar::placeholder {
+  color: #999;
+}
+
+#search-bar:focus {
+  background-color: #fff;
+}
+
+.all-players {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.player {
+  background-color: #E3F2F1;
+  color: #56351E;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9)
+}
+
+.player:hover {
+  background-color:#388E3C;
+}
+
+
+#single-player {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color:#E3F2F1;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9)
+}
+
+#single-player h2 {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+#single-player h3 {
+  font-size: 18px;
+  color: #666;
+}
+
+#single-player h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#single-player img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9)
+}
+
+#delete {
+  background-color: #56351E;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9)
+}
+
+#delete:hover {
+  background-color: #cc4c35;
+}
+
+#player-form {
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #E3F2F1;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9)
+}
+
+#formTitle {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #f19953;
+  text-shadow: 1px 1px 6px rgba(221, 169, 12, 0.6)
+}
+
+.form-item {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9)
+}
+
+#form-submit-button {
+  background-color: #f19953;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9)
+}
+
+#form-submit-button:hover {
+  background-color: #cc4c35;
 }
