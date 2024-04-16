@@ -6,6 +6,8 @@
 
 body {
   background-image: url('https://img.freepik.com/free-photo/close-up-football-field_23-2148930198.jpg?w=1060&t=st=1713267908~exp=1713268508~hmac=a63a9b658b2797003a598a16f619c586190970dffc001c13b31c9a736dd5512d');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #navbar {
