@@ -197,3 +197,34 @@ body {
 #form-submit-button:hover {
   background-color: #cc4c35;
 }
+
+.removed-player {
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #E3F2F1;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9)
+}
+
+.removed-player h3 {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.removed-player .button {
+  background-color: #ff6347;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9)
+}
+
+.removed-player .button:hover {
+  background-color: #cc4c35;
+}
